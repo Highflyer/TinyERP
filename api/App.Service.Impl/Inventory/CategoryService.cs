@@ -115,11 +115,6 @@
                 validationException.Add(new App.Common.Validation.ValidationError("inventory.addOrUpdateCategory.validation.categoryNotExisted"));
             }
 
-            if (string.IsNullOrWhiteSpace(updateCategoryRequest.Name))
-            {
-                validationException.Add(new App.Common.Validation.ValidationError("inventory.addOrUpdateCategory.validation.nameRequired"));
-            }
-
             if (updateCategoryRequest.Name.Length > FormValidationRules.MaxNameLength)
             {
                 validationException.Add(new App.Common.Validation.ValidationError("common.form.validation.fieldTooLong"));
